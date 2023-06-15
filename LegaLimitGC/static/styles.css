@@ -1,0 +1,209 @@
+body {
+    font: 0.9em/1.2;
+    background-color: rgb(207, 232, 150);
+    height: 100vh;
+    width: 100vw;
+    }
+
+.container {
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "sidebar content"
+    "sidebar content"
+    "footer footer";
+    grid-template-columns: 3.1fr 4.6fr;
+    gap: 6vh;
+    }
+
+header,
+footer {
+    display: grid;
+    border-radius: 5px;
+    background-color: rgb(207, 232, 220);
+    border: 2px solid rgb(79, 185, 227);
+    height: 6vh;
+    padding: 3px;
+    }
+
+aside {
+    display: grid;
+    border: 2px solid rgb(79, 185, 227);
+    padding: 5%;
+    border-radius: 5%;
+    grid-area: sidebar;
+    font-family: Monospace;
+    }
+
+h3, h5{
+    text-shadow: 2px 2px rgb(207, 232, 220);
+    text-align: center;
+    border-radius: 5%;
+    border: 2px solid rgb(79, 185, 227);
+    }
+
+.nav-link{
+    text-shadow: 2px 2px rgb(207, 232, 220);
+    }
+
+header{
+    display: grid;
+    grid-area: header;
+    font-family: Monospace;
+    font-size: 4vh;
+    padding: 10px, 20px, 10px, 10px;
+    }
+
+article{
+    display: grid;
+    grid-area: content;
+    font-family: Monospace;
+    border: 2px solid rgb(79, 185, 227);
+    padding: 5%;
+    padding-top: 3.5%;
+    border-radius: 5%;
+  }
+
+footer{
+    grid-area: footer;
+    font-size: 2vh;
+    padding: 2px;
+    margin: auto;
+  }
+
+button{
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: rgb(207, 232, 220);
+    border: 2px solid rgb(79, 185, 227);
+    text-align: center;
+    padding: 10px;
+    }
+
+button:hover{
+    background-color: rgb(207, 232, 150);
+    color: white;
+    }
+
+.butns{
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3vh;
+    width: 30vw;
+    }
+
+.butwid{
+    width: 30vw;
+  }
+
+#stateName{
+      width: 8vw;
+    }
+
+#cityName{
+      width: 15vw;
+    }
+
+input{
+    border-radius: 5px;
+    width: 22vw;
+    }
+
+.federalContainer{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4f/US_Capitol_west_side.JPG");
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    border-radius: 200px;
+    border: 4px solid rgb(79, 185, 227);
+    }
+
+.stateContainer{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b9/2020_Hawaii_State_Capitol_02_%28cropped%29.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    border-radius: 200px;
+    border: 4px solid rgb(79, 185, 227);
+    }
+
+.localContainer{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b4/Philadelphia_City_Hall%2C_aerial_view%2C_cropped.png");
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    border-radius: 200px;
+    border: 4px solid rgb(79, 185, 227);
+  }
+
+.textbox{
+    position: absolute;
+    top: 13%;
+    left: 42.5%;
+    width: 17%;
+    height: 5.5%;
+    background-color: rgb(207, 232, 220);
+    border: 3px solid rgb(79, 185, 227);
+    border-radius: 5px;
+    justify-content: center;
+    display: flex;
+}
+
+#fedSearch{
+    margin: auto;
+  }
+
+#stateSearch{
+    margin: auto;
+  }
+
+#localSearch{
+    margin: auto;
+  }
+
+.nav-link{
+    color: white;
+  }
+
+#localTextbox{
+      position: initial !important;
+      top: 30% !important;
+    }
+
+.alert.alert-primary.mb-0.text-center{
+      height: 5vh;
+      font-size: 2.5vh;
+      padding: 1vh;
+    }
+
+.navbar-brand{
+    font-family: monospace;
+  }
+
+textarea{
+
+    border-radius: 3%;
+  }
+
+table {
+    background-color: transparent;
+    border-collapse: separate !important;
+    width: 85vw;
+    margin: auto;
+}
+
+th{
+    color: #537fbe;
+}
+
+table th,
+table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    border: 5px solid white;
+}
+
+p{
+  text-align: justify;
+}

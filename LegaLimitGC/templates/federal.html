@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Federal
+{% endblock %}
+
+{% block main %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+   var federalSearch = document.getElementById("federal-search");
+   federalSearch.addEventListener("keypress", function(e){
+     if (e.key === 'Enter'){
+       window.open("https://uscode.house.gov/search.xhtml?searchString="+federalSearch.value);
+     }
+   });
+ });
+</script>
+
+    <div class="federalContainer">
+
+      <div class="textbox">
+        <div id="fedSearch">
+          <form action="/federal" method="post">
+            <input autofocus placeholder="Search Federal Titles" type="text" id="federal-search">
+          </form>
+        </div>
+      </div>
+    </div>
+{% endblock %}

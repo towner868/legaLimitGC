@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Local
+{% endblock %}
+
+{% block main %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var localSearch = document.getElementById("local-search");
+    localSearch.addEventListener("keypress", function(e){
+    if (e.key === 'Enter'){
+      window.open('https://library.municode.com/' + localSearch.value);
+    }
+    });
+    });
+  </script>
+
+  <div class="localContainer">
+    <br>
+
+    <div id="localTextbox">
+      <div class="textbox">
+        <div id="localSearch">
+          <input autofocus placeholder="Enter state initials, e.g. 'CA'" type="search" id="local-search">
+        </div>
+      </div>
+    </div>
+  </div>
+    <br>
+
+    <footer class="mb-5 small text-center text-muted">
+      Data provided by: municode, powered by CIVICPLUS
+    </footer>
+{% endblock %}

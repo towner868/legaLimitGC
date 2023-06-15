@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search Results
+{% endblock %}
+
+{% block main %}
+<header>Search Portfolio: {{name[0]["username"]}} </header>
+<br>
+<div class="container-fluid">
+ <table>
+      <thead>
+          <tr>
+              <th>Statute</th>
+              <th>Flag Note</th>
+              <th>Level</th>
+              <th>State</th>
+              <th>Locality</th>
+              <th>URL</th>
+              <th colspan="3">Options</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for row in searchPortfolio %}
+          <tr>
+              <td>{{ row["statute"]}}</td>
+              <td>{{ row["reason"]}}</td>
+              <td>{{ row["level"]}}</td>
+              <td>{{ row["stateName"]}}</td>
+              <td>{{ row["cityName"]}}</td>
+              <td><a href="{{ row['url']}}" target="blank">link to source</a></td>
+              <td>
+                <form action="/fullText" method="post">
+                    <input name="id" type="hidden" value="{{ row['id'] }}">
+                    <button type="submit">Full Text</button>
+                </form>
+                </td>
+                <td>
+                <form action="/edit" method="post">
+                    <input name="id" type="hidden" value="{{ row['id'] }}">
+                    <button type="submit">Edit</button>
+                </form>
+                </td>
+                <td>
+                <form action="/delete" method="post">
+                <input name="id" type="hidden" value="{{ row['id'] }}">
+                <button type="submit">Delete</button>
+            </form>
+            </td>
+          </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+  </div>
+{% endblock %}

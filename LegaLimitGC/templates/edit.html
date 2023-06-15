@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Edit Record
+{% endblock %}
+
+{% block main %}
+<form action="/replace" method="post">
+  <input name="id" type="hidden" value="{{ editId[0]['id'] }}">
+
+    <div class="container">
+      <header>Edit Record</header>
+
+      <article>
+        <textarea id="statuteText" name="statuteText">{{editId[0]["statuteCopy"]}}</textarea>
+      </article>
+
+      <aside>
+        <h5 style="text-align: center;"><strong>Submit Fields</strong></h5><br>
+
+        <fieldset>
+
+          <label for="governance">Enter Governance Level</label>
+			      <select name="level" id="level">
+              <option value="{{editId[0]['level']}}">{{editId[0]['level']}}</option>
+              <option value="federal">federal</option>
+              <option value="state">state</option>
+              <option value="local">local</option>
+            </select>
+            <br><br>
+
+            <label>If applicable, enter state initials:</label><br>
+				    <input type="text" id="stateName" name="stateName" size="5" value="{{editId[0]['stateName']}}"><br>
+
+            <label>name of locality:</label><br>
+				    <input type="text" id="cityName" name="cityName" size="20" value="{{editId[0]['cityName']}}"><br></br>
+
+            <label>Statute</label><br>
+				    <input type="text" id="statute" name="statute" size="30" value="{{editId[0]['statute']}}"><br></br>
+
+            <label>Paste URL</label><br>
+				    <input type="text" id="url" name="url" size="30" value="{{editId[0]['url']}}"><br></br>
+
+            <label>Reason for flagging this statute</label><br>
+			      <input type="text" id="flagNote" name="flagNote" size="40" value="{{editId[0]['reason']}}"><br></br>
+			      <button type="submit">Submit Edits</button><br>
+
+	      </fieldset>
+      </aside>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    State
+{% endblock %}
+{% block main %}
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+             var stateSearch = document.getElementById("state-search");
+             stateSearch.addEventListener("keypress", function(e){
+               if (e.key === 'Enter'){
+                 window.open('https://www.law.cornell.edu/states/' + stateSearch.value);
+               }
+             });
+           });
+         </script>
+
+        <div class="stateContainer">
+          <br>
+
+            <div class="textbox">
+
+                <div id="stateSearch">
+                    <input autofocus placeholder="Enter full state name, e.g. 'Maine'" type="search" id="state-search">
+                </div>
+                <p id="stateResult"></p>
+            </div>
+        </div>
+        <br>
+    <footer class="mb-5 small text-center text-muted">
+      Data provided by: Legal Information Institute at Cornell Law School
+  </footer>
+{% endblock %}

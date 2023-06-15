@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Submit Search Results
+{% endblock %}
+
+{% block main %}
+<form action="/submit" method="post">
+<div class="container">
+    <header>Enter Statute Information</header>
+    <article>
+      <textarea id="statuteText" name="statuteText" placeholder="  Paste Statute Text Here"></textarea>
+    </article>
+    <aside>
+      <h5 style="text-align: center;"><strong>Submit Fields</strong></h5><br>
+      <fieldset>
+        <br>
+			<label for="governance">Enter Governance Level</label>
+			  <select name="level" id="level">
+          <option disabled selected>gov't</option>
+          <option value="federal">federal</option>
+          <option value="state">state</option>
+          <option value="local">local</option>
+        </select>
+        <br><br>
+      <label>If applicable, enter state initials:</label><br>
+				<input type="text" id="stateName" name="stateName"><br>
+      <label>name of locality:</label><br>
+				<input type="text" id="cityName" name="cityName" size="20"><br></br>
+			<label>Statute</label><br>
+				<input type="text" id="statute" name="statute" placeholder="e.g., 5 USC 101"t maxsize="30"><br></br>
+      <label>Paste URL</label><br>
+				<input type="text" id="url" name="url" maxsize="30"><br></br>
+      <label>Reason for flagging this statute</label><br>
+			  <input type="text" id="flagNote" name="flagNote" maxsize="40"><br></br>
+			<button type="submit">Submit</button><br>
+	</fieldset>
+      </aside>
+  </div>
+</form>
+{% endblock %}

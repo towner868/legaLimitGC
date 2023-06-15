@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index - Homepage
+{% endblock %}
+
+{% block main %}
+<div class="container">
+    <header>legaLimitGC</header>
+      <article>
+        <h3><strong>Tour d'Horizon</strong></h3>
+          <p>
+            <br>
+           Laws are policies. Like policies, they are designed to carry out a mission.
+           When the mission is complete, null-and-void, redundant or the pursuit of such
+           is no longer tenable, the policy is scrubbed. Sunset clauses need to be a
+           more active function in the life cycle of a law. This website aims to identify statutes
+           for scrub review. Just as memory leaks are an issue with any computer program,
+           junk laws impede optimal performance of the legal system.
+
+          </p>
+          <p>
+           The legal system of the United States is variegated, but clearly so. Laws at the Federal,
+           State and Local levels will have a precedure for their expungement. If you suspect a law has
+           expired, this website aims to be your first step in initiating a course for its removal.
+
+          </p>
+          <p>
+           Begin your search in the top or side navagtion panes. After you've located the target statute, enter its
+           details on the Submit page; this will create a record of your search. On the Portfolio page you can then
+           access a list of your records, where they can be edited, deleted, or expanded for full statute text view.
+
+          </p>
+
+
+        </article>
+        <aside>
+          <div class="butns">
+          <h3><strong>Navigation</strong></h3>
+          <p>
+            <br>
+            If you know your statute's administration level, follow a link below.
+          </p>
+	        <button class="butwid" onclick="document.location='federal'">Federal</button><br>
+	        <button class="butwid" onclick="document.location='state'">State</button><br>
+	        <button class="butwid" onclick="document.location='local'">Local</button>
+          <br><br>
+          <p>If not, enter the statute code or key terms in the field below to begin your search.</p>
+          <input autofocus placeholder="General search" type="search" id="generalSearch">
+          </div>
+        </aside>
+      </div>
+{% endblock %}
